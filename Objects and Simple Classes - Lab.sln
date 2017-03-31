@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Randomize Words", "02. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Big Factorial", "03. Big Factorial\03. Big Factorial.csproj", "{BC431752-CDC5-4650-8AA7-CF2C7E15459C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatAndDogProgram", "04. Distance between Points\CatAndDogProgram.csproj", "{29AA4491-4C33-458D-8311-04EFC795C28B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatAndDogProgram", "CatAndDogProgram\CatAndDogProgram.csproj", "{29AA4491-4C33-458D-8311-04EFC795C28B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Distance between Points", "04. Distance between Points\04. Distance between Points.csproj", "{0BF72EA2-5CCC-437E-8C75-5C3591C671E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{29AA4491-4C33-458D-8311-04EFC795C28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29AA4491-4C33-458D-8311-04EFC795C28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29AA4491-4C33-458D-8311-04EFC795C28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF72EA2-5CCC-437E-8C75-5C3591C671E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF72EA2-5CCC-437E-8C75-5C3591C671E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF72EA2-5CCC-437E-8C75-5C3591C671E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF72EA2-5CCC-437E-8C75-5C3591C671E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
