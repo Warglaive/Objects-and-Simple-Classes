@@ -26,7 +26,7 @@ namespace _06.Rectangle_Position
             var inside = false;
             if (r1.Left >= r2.Left
                 && r1.Right <= r2.Right
-                || r1.Top <= r2.Top
+                && r1.Top <= r2.Top
                 && r1.Bottom <= r2.Bottom)
             {
                 inside = true;
