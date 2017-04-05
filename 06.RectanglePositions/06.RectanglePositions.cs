@@ -1,54 +1,74 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace _06.Rectangle_Position
 {
-    public class Rectangle
-    {
-        public decimal Top { get; set; }
-        public decimal Left { get; set; }
-        public decimal Right { get; set; }
-        public decimal Bottom { get; set; }
-        public string Print()
-        {
-            return $"{Top}, {Left}, {Right}, {Bottom}";
-        }
-    }
+
     public class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            var r1 = ReadRectangle();
-            var r2 = ReadRectangle();
-            IsInside(r1, r2);
-        }
-        public static void IsInside(Rectangle r1, Rectangle r2)
-        {
-            var inside = false;
-            if (r1.Left >= r2.Left
-                && r1.Right <= r2.Right
-                && r1.Top <= r2.Top
-                && r1.Bottom <= r2.Bottom)
+            var firstRect = ReadRectangle();
+            var secondRect = ReadRectangle();
+            var result = firstRect.Isinside(secondRect);
+            //    var printResult = result ? "Inside" : "Not inside";
+            if (result)
+
             {
-                inside = true;
-            }
-            if (inside == false)
-            {
-                Console.WriteLine("Not inside");
+                Console.WriteLine("Inside");
             }
             else
             {
-                Console.WriteLine("Inside");
+                Console.WriteLine("Not inside");
+
+            }
+        }
+        //  Console.WriteLine(result);
+
+        public class Rectangle
+        {
+            public int Top { get; set; }
+            public int Left { get; set; }
+            public int Width { get; set; }
+            public int Height { get; set; }
+            public int Bottom
+            {
+                get
+                {
+                    return Top + Height;
+                }
+            }
+            public int Right
+            {
+                get
+                {
+                    return Left + Width;
+                }
+
+            }
+            public bool Isinside(Rectangle rectangle)
+            {
+                var leftIsValid = rectangle.Left <= Left;
+                var topIsValid = rectangle.Top <= Top;
+                var rightIsValid = rectangle.Right >= Right;
+                var bottomIsValid = rectangle.Bottom >= Bottom;
+                return
+                    leftIsValid && topIsValid && rightIsValid && bottomIsValid;
             }
         }
         public static Rectangle ReadRectangle()
         {
-            var rectangleParts = Console.ReadLine().Split(' ').Select(decimal.Parse).ToList();
+            var rectangleParts = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
             return new Rectangle
             {
                 Left = rectangleParts[0],
                 Top = rectangleParts[1],
-                Right = rectangleParts[2],
-                Bottom = rectangleParts[3]
+                Width = rectangleParts[2],
+                Height = rectangleParts[3]
             };
         }
     }
